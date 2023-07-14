@@ -4,7 +4,7 @@
 
 /* main - Entry point */
 
-/* Return: Always 0 (Success) */
+/* printf the number stored in n is positive or negative */
 
 
 int main(void)
