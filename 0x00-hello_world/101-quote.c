@@ -6,7 +6,7 @@
  *
  * prints whithout printf or puts functions
  *
- * return 1
+ * return 1 (error)
 */
 
 int main(void)
