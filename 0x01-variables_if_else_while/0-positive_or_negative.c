@@ -3,7 +3,7 @@
 #include <stdio.h>
 /*main - Entry point*/
 
-/* positive or negative numbers*/
+/*assign a random number to the variable n*/
 
 /*Return: Always 0 (Success)*/
 
