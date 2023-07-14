@@ -4,7 +4,7 @@
 
 /*main - Entry point*/
 
-/*Print whether the number stored in the variable n is positive or negative*/
+/*@brief Print  the number stored in n is positive or negative*/
 
 /*Return: Always 0 (Success)*/
 
