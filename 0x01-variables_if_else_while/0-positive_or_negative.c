@@ -4,8 +4,6 @@
 
 /*main - Entry point*/
 
-/*@brief Print  the number stored in n is positive or negative*/
-
 /*Return: Always 0 (Success)*/
 
 
