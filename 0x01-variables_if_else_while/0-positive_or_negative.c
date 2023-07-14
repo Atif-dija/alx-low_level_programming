@@ -2,9 +2,16 @@
 #include <time.h>
 #include <stdio.h>
 
-/* main - Entry point */
+/* more headers goes there */
 
-/* printf the number stored in n is positive or negative */
+/**
+ * main - Entry point
+ *
+ * description: This program print the number stored in the variable n
+ * is positive or negative
+ *
+ * Return: Always 0 (Success)
+*/
 
 
 int main(void)
