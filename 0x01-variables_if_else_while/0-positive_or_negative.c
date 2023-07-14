@@ -1,9 +1,10 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/*main - Entry point*/
-
-/*assign a random number to the variable n*/
+/**main - Entry point
+ *
+ *assign a random number to the variable n
+*/
 
 /*Return: Always 0 (Success)*/
 
