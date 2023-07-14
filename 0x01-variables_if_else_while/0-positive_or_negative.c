@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 
-/*main - Entry point: assign a random number to the variable n*/
+/*main - Entry point: Print whether the number stored in the variable n is positive or negative*/
 
 /*Return: Always 0 (Success)*/
 
