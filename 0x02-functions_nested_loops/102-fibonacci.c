@@ -10,7 +10,8 @@
 
 int main(void)
 {
-	int i, fib, num1, num2;
+	int i, num1, num2;
+	long unsigned int fib;
 
 	num1 = 0;
 	num2 = 1;
@@ -19,7 +20,7 @@ int main(void)
 	{
 
 		fib = num1 + num2;
-		printf("%d", fib);
+		printf("%lu", fib);
 		num1 = num2;
 		num2 = fib;
 
