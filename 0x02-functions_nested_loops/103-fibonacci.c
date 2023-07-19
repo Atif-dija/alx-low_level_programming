@@ -10,14 +10,13 @@
 
 int main(void)
 {
-	int i;
 	unsigned long num1, num2, fib, sum;
 
 	num1 = 0;
 	num2 = 1;
 	sum = 0;
 
-	for (i = 0; i < 4000000; i++)
+	while (1)
 		{
 
 		fib = num1 + num2;
@@ -25,6 +24,8 @@ int main(void)
 			sum = sum + fib;
 		num1 = num2;
 		num2 = fib;
+		if (fib > 4000000)
+			break;
 
 		}
 	printf("%lu\n", sum);
