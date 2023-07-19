@@ -2,11 +2,13 @@
 #include <stdio.h>
 
 /**
- * print_natural - Entry point
+ * main - Entry point
  * computes and prints the sum of all the multiples of 3 or 5 below 1024
+ *
+ * Return:Always 0;
  */
 
-void print_natural(void)
+int main(void)
 {
 	int i, sum;
 
@@ -17,4 +19,6 @@ void print_natural(void)
 		sum = sum + i;
 	}
 	printf("%d\n", sum);
+
+	return (0);
 }
