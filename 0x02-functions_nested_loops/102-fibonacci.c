@@ -10,8 +10,8 @@
 
 int main(void)
 {
-	int i, num1, num2;
-	long unsigned int fib;
+	int i;
+	unsigned long num1, num2, fib;
 
 	num1 = 0;
 	num2 = 1;
