@@ -13,23 +13,20 @@
 int main(void)
 {
 	int i;
-	char FB[] = "FizzBuzz";
-	char F[] = "Fizz";
-	char B[] = "Buzz";
 
 	for (i = 1; i <= 100; i++)
 	{
 		if (i % 3 == 0 && i % 5 == 0)
 		{
-			printf("%s", FB);
+			printf("FizzBuzz");
 		}
 		else if (i % 3 == 0)
 		{
-			printf("%s", F);
+			printf("Fizz");
 		}
 		else if (i % 5 == 0)
 		{
-			printf("%s", B);
+			printf("Buzz");
 		}
 		else
 			printf("%d", i);
