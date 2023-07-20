@@ -21,18 +21,22 @@ int main(void)
 	{
 		if (i % 3 == 0 && i % 5 == 0)
 		{
-			printf("%s ", FB);
+			printf("%s", FB);
 		}
 		else if (i % 3 == 0)
 		{
-			printf("%s ", F);
+			printf("%s", F);
 		}
 		else if (i % 5 == 0)
 		{
-			printf("%s ", B);
+			printf("%s", B);
 		}
 		else
-			printf("%d ", i);
+			printf("%d", i);
+		if (i != 100)
+			putchar(' ');
+		else
+			putchar('\n');
 	}
 	printf("\n");
 	return (0);
