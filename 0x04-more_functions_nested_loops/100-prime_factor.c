@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	unsigned long i, largest, div, half, num;
+	long i, largest, div = 0, half, num;
 
 	num = 612852475143;
 	half = 612852475143 / 2;
@@ -33,6 +33,6 @@ int main(void)
 		largest = div;
 
 	}
-	printf("%lu\n", largest);
+	printf("%ld\n", largest);
 	return (0);
 }
