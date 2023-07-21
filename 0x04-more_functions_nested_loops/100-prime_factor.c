@@ -10,29 +10,28 @@
 
 int main(void)
 {
-	long i, largest, div = 0, half, num;
-
-	num = 612852475143;
-	half = 612852475143 / 2;
+	long num = 612852475143;
+	long largest = 0;
+	long i;
 
 	while (num % 2 == 0)
 	{
-		div = 2;
-		num = num / 2;
+		largest = 2;
+		num /= 2;
 	}
-	largest = div;
 
-	for (i = 3; i <= half; i = i + 2)
+	for ( i = 3; i * i <= num; i += 2)
 	{
 		while (num % i == 0)
 		{
-			div = i;
-			num = num / i;
+			largest = i;
+			num /= i;
 		}
-	if (div > largest)
-		largest = div;
-
 	}
+
+	if (num > 2)
+		largest = num;
+
 	printf("%ld\n", largest);
 	return (0);
 }
