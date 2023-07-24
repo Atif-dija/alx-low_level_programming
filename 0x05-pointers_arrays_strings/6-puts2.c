@@ -9,7 +9,7 @@
  */
 void puts2(char *str)
 {
-	int length = 0;
+	int i, length = 0;
 	char *s = str;
 
 	while (*s != '\0')
@@ -17,10 +17,10 @@ void puts2(char *str)
 		length++;
 		s++;
 	}
-	while (*str != '\0')
+	for (i = 0; i < length; i++)
 	{
-		_putchar(*str);
-		str += 2;
+		if (i % 2 == 0)
+			_putchar(str[i]);
 	}
 
 	_putchar('\n');
