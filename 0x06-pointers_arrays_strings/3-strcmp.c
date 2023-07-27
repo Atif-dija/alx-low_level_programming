@@ -40,7 +40,7 @@ int _strcmp(char *s1, char *s2)
 	{
 		if (m > n)
 			val = -15;
-		else
+		else if (n > m)
 			val = 15;
 	}
 	return (val);
