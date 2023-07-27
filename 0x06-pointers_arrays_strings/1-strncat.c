@@ -23,12 +23,9 @@ int i, j = 0;
 		j++;
 	}
 
-	for (i = 0; i < n; i++)
+	for (i = 0; i < n && (src[i] != '\0'); i++)
 	{
-		if (src[i] != '\0')
-		{
 			dest[j + i] = src[i];
-		}
 	}
 	dest[j + i] = '\0';
 	return (dest);
