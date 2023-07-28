@@ -11,13 +11,13 @@
 char *rot13(char *s)
 {
 	char *c = s;
-	unsigned int i;
+	int i;
 	char alph[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char alph_13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFJHIJKLM";
 
 		while (*s)
 		{
-		for (i = 0; i < sizeof(alph); i++)
+		for (i = 0; i < 52; i++)
 
 		{
 			if (*s == alph[i])
