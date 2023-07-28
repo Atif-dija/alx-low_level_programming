@@ -14,6 +14,9 @@ char *cap_string(char *s)
 
 	while (s[i] != '\0')
 	{
+		if (i == 1 && (s[i] >= 'a' && s[i] <= 'z'))
+			s[i] = s[i] - ('a' - 'A');
+
 	switch (s[i])
 	{
 		case ' ':
@@ -30,9 +33,7 @@ char *cap_string(char *s)
 		case '{':
 		case '}':
 			if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
-			{
 				s[i + 1] = s[i + 1] - ('a' - 'A');
-			}
 			break;
 	}
 	i++;
