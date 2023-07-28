@@ -23,6 +23,7 @@ char *rot13(char *s)
 			if (*s == alph[i])
 			{
 				*s = alph_13[i];
+				break;
 			}
 		}
 		s++;
