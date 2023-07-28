@@ -10,14 +10,15 @@
 
 char *cap_string(char *s)
 {
-	int i = 0;
+	int i = 1;
+
+	if (s[0] >= 'a' && s[0] <= 'z')
+		s[0] = s[0] - ('a' - 'A');
 
 	while (s[i] != '\0')
 	{
-		if (i == 1 && (s[i] >= 'a' && s[i] <= 'z'))
-			s[i] = s[i] - ('a' - 'A');
 
-	switch (s[i])
+	switch (s[i - 1])
 	{
 		case ' ':
 		case '\t':
@@ -32,8 +33,8 @@ char *cap_string(char *s)
 		case ')':
 		case '{':
 		case '}':
-			if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
-				s[i + 1] = s[i + 1] - ('a' - 'A');
+			if (s[i] >= 'a' && s[i] <= 'z')
+				s[i] = s[i] - ('a' - 'A');
 			break;
 	}
 	i++;
