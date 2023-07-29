@@ -1,5 +1,30 @@
 #include "main.h"
-#include <stdlib.h>
+
+/**
+ * rev_string - reverse array
+ *
+ * @rst: input of function
+ */
+
+void rev_string(char *str)
+{
+	int i = 0;
+	int j = 0;
+	char cvr;
+
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	i--;
+
+	for (j = 0; j < i; j++, i--)
+	{
+		cvr = str[j];
+		str[j] = str[i];
+		str[i] = cvr;
+	}
+}
 
 /**
  * infinite_add - function that adds two numbers
@@ -16,7 +41,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int n = 0, N = 0, k = 0;
 	int  num1 = 0, num2 = 0, ret = 0, sum = 0;
-	char cvr;
 
 	/* size of n1*/
 	while (n1[n] != '\0')
@@ -30,11 +54,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	}
 	n--;
 	N--;
-	if  (n < 0 || N < 0)
-		return (0);
-	if ((N >= size_r) || (n >= size_r))
-		return (0);
-	if (n1[0] == '-' || n2[0] == '-')
+	if (n >= size_r || N >= size_r)
 		return (0);
 	/* adds two numbers*/
 	while (n >= 0 || N >= 0 || ret)
@@ -55,13 +75,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	}
 	if (k == size_r)
 		return (0);
-	/*reverse result*/
-	for (n = 0, N = k - 1; n < N; n++, N--)
-	{
-		cvr = r[n];
-		r[n] = r[N];
-		r[N] = cvr;
-	}
 	r[k] = '\0';
+	rev_string(r);
 	return (r);
 }
