@@ -3,7 +3,7 @@
 /**
  * rev_string - reverse array
  *
- * @rst: input of function
+ * @str: input of function
  */
 
 void rev_string(char *str)
@@ -40,14 +40,12 @@ void rev_string(char *str)
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int n = 0, N = 0, k = 0;
-	int  num1 = 0, num2 = 0, ret = 0, sum = 0;
+	int num1 = 0, num2 = 0, ret = 0, sum = 0;
 
-	/* size of n1*/
 	while (n1[n] != '\0')
 	{
 		n++;
 	}
-	/*size of n2*/
 	while (n2[N] != '\0')
 	{
 		N++;
@@ -55,6 +53,8 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	n--;
 	N--;
 	if (n >= size_r || N >= size_r)
+		return (0);
+	if (n1[0] == '-' || n2[0] == '-')
 		return (0);
 	/* adds two numbers*/
 	while (n >= 0 || N >= 0 || ret)
