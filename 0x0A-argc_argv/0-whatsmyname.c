@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - prints its name, followed by a new line
  *
  * @argc: The size of the argv array
  * @argv: An array of size argc
