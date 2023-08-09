@@ -5,7 +5,7 @@
 /**
  * main -  adds positive numbers
  *
- * @argc: The size of the argv array
+ * @argc: The size of the argv
  * @argv: An array of size argc
  *
  * Return:  1 If one of the number contains symbols that are not digits
