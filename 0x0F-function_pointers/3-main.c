@@ -13,15 +13,19 @@
 
 int main(int argc, char *argv[])
 {
-	int a = atoi(argv[1]);
-	int b = atoi(argv[3]);
-	char *op = argv[2];
+	int a;
+	int b;
+	char *op;
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
+
+	 a = atoi(argv[1]);
+	 b = atoi(argv[3]);
+	 op = argv[2];
 
 	if (get_op_func(op) == NULL || op[1] != '\0')
 	{
