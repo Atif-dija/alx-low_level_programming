@@ -1,52 +1,44 @@
 #include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
- * main - Entry point
- *
- * @argc: The size of the argv
- * @argv: An array of size argc
- *
- * Return: 0
+ * main - the entry point for the calculator program
+ * @argc: the number of arguments
+ * @argv: the array of arguments
+ * Return: 0 (Success)
  */
 
 int main(int argc, char *argv[])
 {
-	int a;
-	int b;
-	char *op;
+	int num1, num2;
+	int result;
+	int (*op_func)(int, int);
 
 	if (argc != 4)
 	{
 		printf("Error\n");
-		exit(98);
+		return (98);
 	}
 
-	 a = atoi(argv[1]);
-	 b = atoi(argv[3]);
-	 op = argv[2];
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
 
-	if (get_op_func(op) == NULL || op[1] != '\0')
+	op_func = get_op_func(argv[2]);
+
+	if (!op_func)
 	{
 		printf("Error\n");
-		exit(99);
+		return (99);
 	}
 
-	if ((*op == '/' || *op == '%') && b == 0)
+	if ((*argv[2] == '/' || *argv[2] == '%') && num2 == 0)
 	{
 		printf("Error\n");
-		exit(100);
+		return (100);
 	}
 
-	printf("%d\n", get_op_func(op)(a, b));
+	result = op_func(num1, num2);
+	printf("%d\n", result);
+
 	return (0);
 }
-
-
-
-
-
-
-
-
