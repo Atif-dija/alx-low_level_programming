@@ -6,7 +6,7 @@
  * @a: first input
  * @b: second input
  *
- * Return: a * b
+ * Return:  a + b
  */
 
 int op_add(int a, int b)
