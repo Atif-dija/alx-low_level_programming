@@ -13,6 +13,9 @@ void print_all(const char * const format, ...)
 	va_list l_args;
 	char *s;
 	char *separ = "";
+	char c;
+	int num;
+	float fl;
 	int i = 0;
 
 	va_start(l_args, format);
@@ -24,13 +27,16 @@ void print_all(const char * const format, ...)
 			switch (format[i])
 			{
 				case 'c':
-					printf("%s%c", separ, va_arg(l_args, int));
+					c = va_arg(l_args, int);
+					printf("%s%c", separ, c);
 					break;
 				case 'i':
-					printf("%s%d", separ, va_arg(l_args, int));
+					num = va_arg(l_args, int);
+					printf("%s%d", separ, num);
 					break;
 				case 'f':
-					printf("%s%f", separ, va_arg(l_args, double));
+					fl = va_arg(l_args, double);
+					printf("%s%f", separ, fl);
 					break;
 				case 's':
 					s = va_arg(l_args, char*);
