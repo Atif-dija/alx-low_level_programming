@@ -12,8 +12,8 @@ void print_all(const char * const format, ...)
 {
 	va_list l_args;
 	char *s;
-	int i = 0;
 	char *separ = "";
+	int i = 0;
 
 	va_start(l_args, format);
 
