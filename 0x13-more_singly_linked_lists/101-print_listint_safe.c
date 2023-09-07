@@ -5,7 +5,7 @@
  * in a looped listint_t linked list
  * @head: a linked list
  *
- * Return: 98 if the list is not looped
+ * Return: 0 if the list is not looped
  * or the number of nodes in the list.
  */
 
